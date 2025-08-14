@@ -1,6 +1,7 @@
 import moment from "moment";
 import logo from "../assets/logo.png";
 import Marquee from "react-fast-marquee";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -10,26 +11,27 @@ const Header = () => {
       <p className="mb-2 font-semibold">
         {moment().format("dddd, MMMM Do YYYY")}
       </p>
-      <div className="flex items-center bg-gray-200 p-2 mb-2">
-        <p className="bg-red-600 py-1 px-4 text-white mr-3">Latest</p>
+      <div className="flex items-center w-full md:w-full lg:w-full bg-gray-100 p-2 mb-2">
+        <p className="bg-[#d72050] py-1 px-4 text-white mr-3">Latest</p>
         
           <Marquee pauseOnHover={true} direction="right" className="space-x-8">
-            <p>
+            <Link to={'/'}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Adipisci, incidunt.
-            </p>
-            <p>
+            </Link>
+            <Link to={'/'}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Adipisci, incidunt.
-            </p>
-            <p>
+            </Link>
+            <Link to={'/'}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Adipisci, incidunt.
-            </p>
-            <p>
+            </Link>
+            <Link to={'/'}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Adipisci, incidunt.
-            </p>
+            </Link>
+            
           </Marquee>
         
       </div>
